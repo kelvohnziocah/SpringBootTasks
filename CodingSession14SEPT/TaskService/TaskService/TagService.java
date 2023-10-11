@@ -1,7 +1,7 @@
 package CodingSession14SEPT.TaskService.TaskService;
 
 import CodingSession14SEPT.TaskService.Entity.Tag;
-import CodingSession14SEPT.TaskService.Entity.TaskModel;
+import CodingSession14SEPT.TaskService.Entity.TaskModel1;
 import CodingSession14SEPT.TaskService.TaskRespository.TagRepository;
 import CodingSession14SEPT.TaskService.TaskRespository.TaskRepository;
 import com.example.Items.Service.ItemNotFoundException;
@@ -23,7 +23,7 @@ public class TagService {
     }
 
     public List<Tag> getTagsForItem(Long taskId) {
-        Optional<TaskModel> task = Optional.ofNullable(taskRepository.getTaskById(taskId));
+        Optional<TaskModel1> task = Optional.ofNullable(taskRepository.getTaskById(taskId));
         if (task.isPresent()) {
             return task.get().getTags();
         } else {

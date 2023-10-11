@@ -16,7 +16,7 @@ public class Tag {
     @Column(unique = true)
     private String name;
     @ManyToMany(mappedBy = "tags")
-    private List<TaskModel> tasks;
+    private List<CodingSession14SEPT.TaskService.Entity.TaskModel1> tasks;
     public Tag(Tag tagName) {
         this.name = name;
     }
