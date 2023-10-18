@@ -2,7 +2,6 @@ package CodingSession14SEPT.TaskService.TaskService;
 
 import CodingSession14SEPT.TaskService.Entity.Tag;
 import CodingSession14SEPT.TaskService.Entity.TaskModel;
-import CodingSession14SEPT.TaskService.Entity.TaskModel1;
 import CodingSession14SEPT.TaskService.TaskRespository.TagRepository;
 import CodingSession14SEPT.TaskService.TaskRespository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,6 +59,8 @@ public class TaskServiceImplementation implements TaskService{
         }
         return taskRepository.getTaskById(id);
     }
+
+    @Override
     public TaskModel updateTask(Long id, TaskModel updatedTask){
         // Use anyMatch to check if a task with the given ID exists
         boolean taskExists = taskRepository.existsById(id);
